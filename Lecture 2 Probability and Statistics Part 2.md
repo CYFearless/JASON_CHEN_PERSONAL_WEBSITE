@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Your Title"
+mathjax: true
+---
+
 ## Lecture 2 Probability and Statistics Part 2
 
 *Jason Chen YCHEN148@e.ntu.edu.sg* 
