@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
@@ -219,174 +219,161 @@ mjx-container { break-inside: avoid; }
 .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
-@include-when-export url(https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext);
-
-/* cyrillic-ext */
-/* cyrillic */
-:root {
-	--window-border: none;
-	--typora-center-window-title: true;
-	--active-file-bg-color: #f3f3f3;
-	--bg-color: #fcfcfc;
-	--control-text-color: #777;
+html {
+	font-size: 19px;
 }
 
-.mac-seamless-mode #typora-sidebar {
-	top: 20px;
-	padding-top: 0;
-	height: auto;
-}
-
-html,
-body,
-#write{
-	background: #fcfcfc;
-	background: var(--bg-color);
-	font-family: 'TeXGyreAdventor', "Century Gothic", "Didact Gothic", "Yu Gothic", 'Segoe UI Emoji', sans-serif;
-	font-weight: 300;
+html, body {
+	margin: auto;
+	background: #fefefe;
 	-webkit-font-smoothing: antialiased;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: #111;
-	font-family: 'TeXGyreAdventor', "Century Gothic", "Didact Gothic", "Yu Gothic", sans-serif;
-}
-
-html {
-	font-size:16px;
+body {
+	font-family: "Vollkorn", Palatino, Times;
+	color: #333;
+	line-height: 1.4;
+	text-align: justify;
 }
 
 #write {
-	max-width: 914px;
-	text-align: justify;
+	max-width: 960px;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	line-height: 1.53;
+	padding-top: 40px;
 }
 
 @media only screen and (min-width: 1400px) {
 	#write {
-		max-width: 1024px;
+		max-width: 1100px;
 	}
 }
 
-#write>h1:first-child {
-	margin-top: 2.75rem;
+@media print {
+	html {
+		font-size: 13px;
+	}
 }
-#write>h2:first-child {
-	margin-top: 1.75rem;
-}
-#write>h3:first-child {
-	margin-top: 1rem;
-}
-#write>h4:first-child {
-	margin-top: 0.5rem;
-}
+
+/* Typography
+-------------------------------------------------------- */
+
+#write>h1:first-child,
 h1 {
+	margin-top: 1.6em;
 	font-weight: normal;
-	line-height: 4rem;
-	margin: 0 0 1.75rem;
-	padding: 20px 30px;
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 4rem;
 }
+
+h1 {
+	font-size:3em;
+}
+
 h2 {
+	margin-top:2em;
 	font-weight: normal;
-	line-height: 3rem;
-	margin: 0 0 1.9375rem;
-	padding: 0 30px;
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 3rem
 }
+
 h3 {
 	font-weight: normal;
+	font-style: italic;
+	margin-top: 3em;
 }
-h4 {
-	font-weight: normal;
+
+h1, 
+h2, 
+h3{
+	text-align: center;
 }
-h5 {
-	font-size: 1.125rem;
-	font-weight: normal;
+
+h2:after{
+	border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    height: 1px;
 }
-h6 {
-	font-size: 1rem;
-	font-weight: bold;
+
+h1+h2, h2+h3 {
+	margin-top: 0.83em;
 }
-p {
-	color: #111;
-	font-size: 1rem;
-	line-height: 1.75rem;
-	margin: 0 0 1.25rem;
+
+p,
+.mathjax-block {
+	margin-top: 0;
+	-webkit-hypens: auto;
+	-moz-hypens: auto;
+	hyphens: auto;
 }
-#write>h3.md-focus:before {
-	left: -1.875rem;
-	top: 0.5rem;
-	padding: 2px;
+ul {
+	list-style: square;
+	padding-left: 1.2em;
 }
-#write>h4.md-focus:before {
-	left: -1.875rem;
-	top: 0.3125rem;
-	padding: 2px;
+ol {
+	padding-left: 1.2em;
 }
-#write>h5.md-focus:before {
-	left: -1.875rem;
-	top: 0.25rem;
-	padding: 2px;
-}
-#write>h6.md-focus:before {
-	left: -1.875rem;
-	top: .125rem;
-	padding: 2px;
-}
-@media screen and (max-width: 48em) {
-	blockquote {
-		margin-left: 1rem;
-		margin-right: 0;
-		padding: 0.5em;
-	}
-	.h1,
-	h1 {
-		font-size: 2.827rem;
-	}
-	.h2,
-	h2 {
-		font-size: 1.999rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.413rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.250rem;
-	}
-	.h5,
-	h5 {
-		font-size: 1.150rem;
-	}
-	.h6,
-	h6 {
-		font-size: 1rem;
+
+@media print {
+	ol {
+		padding-left: 40px;
 	}
 }
-a,
-.md-def-url {
-	color: #990000;
+
+blockquote {
+	margin-left: 1em;
+	padding-left: 1em;
+	border-left: 1px solid #ddd;
+}
+code,
+pre {
+	font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+	font-size: .9em;
+	background: white;
+}
+.md-fences{
+	margin-left: 1em;
+	padding-left: 1em;
+	border: 1px solid #ddd;
+	padding-bottom: 8px;
+	padding-top: 6px;
+	margin-bottom: 1.5em;
+}
+
+a {
+	color: #2484c1;
 	text-decoration: none;
 }
 a:hover {
 	text-decoration: underline;
 }
+a img {
+	border: none;
+}
+h1 a,
+h1 a:hover {
+	color: #333;
+	text-decoration: none;
+}
+hr {
+	color: #ddd;
+	height: 1px;
+	margin: 2em 0;
+	border-top: solid 1px #ddd;
+	border-bottom: none;
+	border-left: 0;
+	border-right: 0;
+}
+.ty-table-edit {
+	background: #ededed;
+    padding-top: 4px;
+}
 table {
-	margin-bottom: 20px
+	margin-bottom: 1.333333rem
 }
 table th,
 table td {
 	padding: 8px;
-	line-height: 1.25rem;
+	line-height: 1.333333rem;
 	vertical-align: top;
 	border-top: 1px solid #ddd
 }
@@ -407,102 +394,42 @@ table thead:first-child tr:first-child td {
 table tbody+tbody {
 	border-top: 2px solid #ddd
 }
-code, .md-fences {
-	padding: .5em;
-	/*background: #f0f0f0;*/
-	border: 1px solid #ccc;
-	padding: .1em;
-	font-size: 0.9em;
-	margin-left: 0.2em;
-	margin-right: 0.2em;
-}
-.md-fences {
-	margin: 0 0 20px;
-	font-size: 1em;
-	padding: 0.3em 1em;
-  	padding-top: 0.4em;
-}
+
 .task-list{
-	padding-left: 0;
+	padding:0;
 }
 
-.task-list-item {
-	padding-left:2.125rem;
+.md-task-list-item {
+	padding-left: 1.6rem;
 }
 
-input {
-	border-style: ridge;
-}
-
-.task-list-item input {
-	top: 3px;
-}
-
-.md-task-list-item input {
-	margin-left: -1.5em;
-}
-
-.task-list-item input:before {
-	content: "";
+.md-task-list-item > input:before {
+	content: '\221A';
 	display: inline-block;
-	width: 1rem;
-	height: 1rem;
+	width: 1.33333333rem;
+  	height: 1.6rem;
 	vertical-align: middle;
 	text-align: center;
-	border: 1px solid gray;
-	background-color: #fdfdfd;
-	margin-left: 0;
-	-webkit-appearance: none;
-	margin-top: -1rem;
+	color: #ddd;
+	background-color: #fefefe;
 }
 
-.typora-node .task-list-item input:before {
-	top: 0.3ex;
-	position: absolute;
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	color: inherit;
 }
-
-.task-list-item input:checked:before,
-.task-list-item input[checked]:before{
-	content: '\25FC';
-	/*◘*/
-	font-size: 0.8125rem;
-	line-height: 0.9375rem;
-}
-
-/* Chrome 29+ */
-.task-list-item input:before {
-	margin-top: -0.2rem;
-}
-
-.task-list-item input:checked:before,
-.task-list-item input[checked]:before {
-	margin-top: -0.2rem;
-}
-
-.html-for-mac .task-list-item input:checked:before,
-.html-for-mac .task-list-item input[checked]:before {
-	margin-top: -0.8rem;
-}
-
-blockquote {
-	margin: 0 0 1.11111rem;
-	padding: 0.5rem 1.11111rem 0 1.05556rem;
-	border-left: 1px solid gray;
-}
-blockquote,
-blockquote p {
-	line-height: 1.6;
-	color: #6f6f6f;
+.md-tag {
+	color: inherit;
+	font: inherit;
 }
 #write pre.md-meta-block {
-	min-height: 30px;
+	min-height: 35px;
+	padding: 0.5em 1em;
+}
+#write pre.md-meta-block {
+	white-space: pre;
 	background: #f8f8f8;
-	padding: 1.5em;
-	font-weight: 300;
-	font-size: 1em;
-	padding-bottom: 1.5em;
-	padding-top: 3em;
-    margin-top: -1.5em;
+	border: 0px;
 	color: #999;
 	
 	width: 100vw;
@@ -510,74 +437,82 @@ blockquote p {
 	margin-left: -30px;
 	border-left: 30px #f8f8f8 solid;
 	border-right: 30px #f8f8f8 solid;
-}
-.MathJax_Display {
+
+	margin-bottom: 2em;
+	margin-top: -1.3333333333333rem;
+	padding-top: 26px;
+	padding-bottom: 10px;
+	line-height: 1.8em;
 	font-size: 0.9em;
-	margin-top: 0.5em;
-	margin-bottom: 0;
+	font-size: 0.76em;
+	padding-left: 0;
 }
-p.mathjax-block,
-.mathjax-block {
-	padding-bottom: 0;
+.md-img-error.md-image>.md-meta{
+	vertical-align: bottom;
 }
-.mathjax-block>.code-tooltip {
-	bottom: 5px;
-	box-shadow: none;
-}
-.md-image>.md-meta {
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-}
-.md-image>img {
-	margin-top: 2px;
-}
-.md-image>.md-meta:first-of-type:before {
-	padding-left: 4px;
+#write>h5.md-focus:before {
+	top: 2px;
 }
 
-#typora-source {
-	color: #555;
+.md-toc {
+	margin-top: 40px;
 }
 
-/** ui for windows **/
-#md-searchpanel {
-    border-bottom: 1px solid #ccc;
-}
-
-#md-searchpanel .btn {
-    border: 1px solid #ccc;
-}
-
-#md-notification:before {
-	top: 14px;
-}
-
-#md-notification {
-	background: #eee;
-}
-
-.megamenu-menu-panel .btn {
-	border: 1px solid #ccc;
-}
-
-#typora-sidebar {
-	box-shadow: none;
-}
-
-.file-list-item ,
-.show-folder-name .file-list-item {
-	padding-top: 20px;
+.md-toc-content {
 	padding-bottom: 20px;
-	line-height: 20px;
 }
 
-.file-list-item-summary {
-	height: 40px;
-	line-height: 20px;
+.outline-expander:before {
+	color: inherit;
+	font-size: 14px;
+	top: auto;
+	content: "\f0da";
+	font-family: FontAwesome;
 }
 
-.ty-table-edit {
-	background: #ededed;
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  	content: "\f0d7";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.html-for-mac #typora-sidebar {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.typora-node .file-list-item-parent-loc, 
+.typora-node .file-list-item-time, 
+.typora-node .file-list-item-summary {
+	font-family: arial, sans-serif;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: calc(1rem - 12px);
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.md-fences .code-tooltip {
+	bottom: -2em !important;
 }
 
 .dropdown-menu .divider {
@@ -588,6 +523,6 @@ p.mathjax-block,
 </style><title>chenye_website</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='jason-chen-personal-website'><span>JASON CHEN PERSONAL WEBSITE</span></h1><p><strong><span>Jason Chen </span><a href='mailto:YCHEN148@e.ntu.edu.sg' target='_blank' class='url'>YCHEN148@e.ntu.edu.sg</a></strong><span> </span></p><hr /><p><strong><span>Welcome to My Personal Page</span></strong></p><p><span>I&#39;m Jason Chen, a passionate </span><strong><span>Data Science Researcher</span></strong><span> with a strong foundation in </span><strong><span>Financial Technology</span></strong><span> and </span><strong><span>Data Science</span></strong><span>. Currently pursuing my M.Sc. in Financial Technology at </span><strong><span>Nanyang Technological University</span></strong><span>, Singapore, I hold a B.Sc. in Data Science and Big Data Technology from </span><strong><span>The Chinese University of Hong Kong, Shenzhen</span></strong><span>. I am currently seeking internship opportunities in </span><strong><span>Data Science</span></strong><span>, </span><strong><span>Data Analysis</span></strong><span>, or related fields in Singapore to further apply my skills and contribute to impactful projects.</span></p><hr /><h3 id='professional-background'><strong><span>Professional Background</span></strong></h3><p><span>I have gained invaluable experience through various internships, where I have honed my skills in </span><strong><span>Data Analysis</span></strong><span>, </span><strong><span>Machine Learning</span></strong><span>, and </span><strong><span>Quantitative Research</span></strong><span>. Some highlights include:</span></p><ul><li><p><strong><span>Tencent Holdings (2024):</span></strong><span> As a Data Scientist Intern at IEG - Start Cloud Game, I significantly improved the efficiency of computing key metrics like PCU and DAU using Spark/MapReduce and Flink, reducing storage by 50%. I also implemented advanced data mining techniques with HunYuan-GPT for cloud gaming feedback categorization with 95% accuracy.</span></p></li><li><p><strong><span>Tencent Holdings (2023-2024):</span></strong><span> In my role as a Global Public Relations Intern, I optimized prompt engineering for games like SYNCED, analyzed over a billion media comments, and led compliance monitoring and reporting efforts.</span></p></li><li><p><strong><span>FireStone (2023):</span></strong><span> I enhanced cement price forecasting and corporate credit scoring models as a Data Analyst Intern, contributing to better purchasing strategies and risk management.</span></p></li><li><p><strong><span>WeShare (2022):</span></strong><span> As a Quantitative Engineer Intern, I optimized ABS-DCF valuation models and assisted in fund manager evaluations, improving computation speed and supporting investment decisions.</span></p></li></ul><h3 id='research-experience'><strong><span>Research Experience</span></strong></h3><p><span>My research endeavors have led to the development of innovative models, such as a </span><strong><span>GNN-GLU model</span></strong><span> for multivariate time series forecasting and an </span><strong><span>NBA player rating model</span></strong><span> using XGBoost. These projects have deepened my understanding of </span><strong><span>machine learning</span></strong><span> and </span><strong><span>statistical modeling</span></strong><span>, enabling me to contribute to both academic and industry-focused work.</span></p><h3 id='personal-interests'><strong><span>Personal Interests</span></strong></h3><p><span>When I&#39;m not immersed in data and code, I enjoy staying active with </span><strong><span>Marathon running</span></strong><span>, </span><strong><span>Basketball</span></strong><span>, </span><strong><span>CrossFit</span></strong><span>, and playing the </span><strong><span>Piano</span></strong><span>. I also have a keen interest in </span><strong><span>Comedy</span></strong><span> and </span><strong><span>FPS games</span></strong><span>.</span></p><h3 id='connect-with-me'><strong><span>Connect with Me</span></strong></h3><p><span>I&#39;m always open to connecting with like-minded professionals and exploring new opportunities. Whether you&#39;re interested in discussing data science, collaborating on a project, or just sharing insights, feel free to reach out to me at </span><a href='mailto:YCHEN148@e.ntu.edu.sg' target='_blank' class='url'>YCHEN148@e.ntu.edu.sg</a><span>.</span></p><hr /><p><strong><span>Course Notes</span></strong></p><ul><li><p><strong><span>MH6800-Foundations of Statistical Modelling</span></strong><span>: Notes for Lecture 2 of the MH6800 course are available </span><a href='https://chenye-daily-study.org/MH6800/L2_Part2.html'><span>here</span></a><span>.</span></p></li></ul><hr /><p><strong><span>Copyright Notice</span></strong></p><p><span>This document is a compilation of original notes by </span><strong><span>Jason Chen</span></strong><span> (</span><a href='mailto:YCHEN148@e.ntu.edu.sg' target='_blank' class='url'>YCHEN148@e.ntu.edu.sg</a><span>). Unauthorized reproduction, downloading, or use for commercial purposes is strictly prohibited and may result in legal action. If you have any questions or find any content-related errors, please contact the author at the provided email address. The author will promptly address any necessary corrections.</span></p></div></div>
+<div id='write'  class=''><h1 id='jason-chen-personal-website'><span>JASON CHEN PERSONAL WEBSITE</span></h1><p><strong><span>Jason Chen </span><a href='mailto:YCHEN148@e.ntu.edu.sg' target='_blank' class='url'>YCHEN148@e.ntu.edu.sg</a></strong><span> </span></p><hr /><p><strong><span>Welcome to My Personal Page</span></strong></p><p><span>I&#39;m Jason Chen, a passionate </span><strong><span>Data Science Researcher</span></strong><span> with a strong foundation in </span><strong><span>Financial Technology</span></strong><span> and </span><strong><span>Data Science</span></strong><span>. Currently pursuing my M.Sc. in Financial Technology at </span><strong><span>Nanyang Technological University</span></strong><span>, Singapore, I hold a B.Sc. in Data Science and Big Data Technology from </span><strong><span>The Chinese University of Hong Kong, Shenzhen</span></strong><span>. I am currently seeking internship opportunities in </span><strong><span>Data Science</span></strong><span>, </span><strong><span>Data Analysis</span></strong><span>, or related fields in Singapore to further apply my skills and contribute to impactful projects.</span></p><hr /><h3 id='professional-background'><strong><span>Professional Background</span></strong></h3><p><span>I have gained invaluable experience through various internships, where I have honed my skills in </span><strong><span>Data Analysis</span></strong><span>, </span><strong><span>Machine Learning</span></strong><span>, and </span><strong><span>Quantitative Research</span></strong><span>. Some highlights include:</span></p><ul><li><p><strong><span>Tencent Holdings (2024):</span></strong><span> As a Data Scientist Intern at IEG - Start Cloud Game</span></p></li><li><p><strong><span>Tencent Holdings (2023-2024):</span></strong><span> As a Global Public Relations Intern at IEG - Global</span></p></li><li><p><strong><span>FireStone (2023):</span></strong><span> As a Data Analyst Intern at Industry Research Department</span></p></li><li><p><strong><span>WeShare (2022):</span></strong><span> As a Quantitative Engineer Intern at CTO Assistant Department</span></p></li></ul><h3 id='research-experience'><strong><span>Research Experience</span></strong></h3><p><span>My research endeavors have led to the development of innovative models, such as a </span><strong><span>GNN-GLU model</span></strong><span> for multivariate time series forecasting and an </span><strong><span>NBA player rating model</span></strong><span> using XGBoost. These projects have deepened my understanding of </span><strong><span>machine learning</span></strong><span> and </span><strong><span>statistical modeling</span></strong><span>, enabling me to contribute to both academic and industry-focused work.</span></p><h3 id='personal-interests'><strong><span>Personal Interests</span></strong></h3><p><span>When I&#39;m not immersed in data and code, I enjoy staying active with </span><strong><span>Marathon running</span></strong><span>, </span><strong><span>Basketball</span></strong><span>, </span><strong><span>CrossFit</span></strong><span>, and playing the </span><strong><span>Piano</span></strong><span>. I also have a keen interest in </span><strong><span>Comedy</span></strong><span> and </span><strong><span>FPS games</span></strong><span>.</span></p><h3 id='connect-with-me'><strong><span>Connect with Me</span></strong></h3><p><span>I&#39;m always open to connecting with like-minded professionals and exploring new opportunities. Whether you&#39;re interested in discussing data science, collaborating on a project, or just sharing insights, feel free to reach out to me at </span><a href='mailto:YCHEN148@e.ntu.edu.sg' target='_blank' class='url'>YCHEN148@e.ntu.edu.sg</a><span>.</span></p><hr /><h3 id='master-course-notes'><strong><span>Master Course Notes</span></strong></h3><ul><li><p><strong><span>MH6800-Foundations of Statistical Modelling</span></strong><span>: Notes for the MH6800 course are available for the following lectures:</span></p><ul><li><p><a href='https://chenye-daily-study.org/MH6800/Lecture%201%20Probability%20and%20Statistics%20Part%201.html'><span>Lecture 1 Probability and Statistics Part 1</span></a></p></li><li><p><a href='https://chenye-daily-study.org/MH6800/Lecture%202%20Probability%20and%20Statistics%20Part%202.html'><span>Lecture 2 Probability and Statistics Part 2</span></a></p></li></ul></li></ul><hr /><p><strong><span>Copyright Notice</span></strong></p><p><span>This document is a compilation of original notes by </span><strong><span>Jason Chen</span></strong><span> (</span><a href='mailto:YCHEN148@e.ntu.edu.sg' target='_blank' class='url'>YCHEN148@e.ntu.edu.sg</a><span>). Unauthorized reproduction, downloading, or use for commercial purposes is strictly prohibited and may result in legal action. If you have any questions or find any content-related errors, please contact the author at the provided email address. The author will promptly address any necessary corrections.</span></p></div></div>
 </body>
 </html>
